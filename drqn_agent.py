@@ -30,8 +30,8 @@ class RQNet(nn.Module):
         self.relu1 = nn.ReLU(inplace=True)
         self.conv2 = torch.nn.Conv2d(6, 12, 3, stride=1, padding=1) 
         self.relu2 = nn.ReLU(inplace=True)
-
-        self.lstm = nn.LSTM(input_size=181, hidden_size=181, num_layers=3)
+        # TO DO: *** WARNING: INPUT SIZE DIFFERS [episode lengths diff] ***
+        self.lstm = nn.LSTM(input_size=30, hidden_size=181, num_layers=3)
         
         self.fc1 = nn.Linear(181, 856)  
         self.relu3 = nn.ReLU(inplace=True)
