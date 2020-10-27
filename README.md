@@ -5,6 +5,8 @@ MSc Thesis on Multi-Agent Reinforcement Learning for Path Planning
 
 More info coming soon. 
 
+Contact: amrinder_rai@hotmail.co.uk
+
 
 ### Abstract
 
