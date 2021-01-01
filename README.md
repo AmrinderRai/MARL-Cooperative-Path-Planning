@@ -1,10 +1,7 @@
 # MARL-Thesis
 MSc Thesis on Multi-Agent Reinforcement Learning for Path Planning 
 
-** A proper Read.me is coming, along with docs & code refactors (sorry).
-
-I can be contacted at: amrinder_rai@hotmail.co.uk
-
+![alt text](https://github.com/AmrinderRai/MARL-Thesis/blob/master/thesis_img.png)
 
 ### Abstract
 
