@@ -1,5 +1,5 @@
 # MARL-Thesis
-MSc Thesis on Multi-Agent Reinforcement Learning for Path Planning 
+MSc Thesis on Multi-Agent Reinforcement Learning for Path Planning (applied to PCB routing)
 
 ![alt text](https://github.com/AmrinderRai/MARL-Thesis/blob/master/thesis_img.png)
 
