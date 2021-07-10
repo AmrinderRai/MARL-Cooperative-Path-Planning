@@ -4,7 +4,7 @@ Forthcoming changes:
 - Getting started / tutorial guide 
 - Documented jupyter notebooks 
 - Implementation of probabilistic agents (using Pyro). 
-- Improved meta-protocol design and message passing capabilities. 
+- Improved meta-protocol design (inc. aggregation function) and message passing capabilities. 
 
 Based on: MSc Thesis on Multi-Agent Reinforcement Learning for Path Planning (applied to PCB routing)[2020]
 
