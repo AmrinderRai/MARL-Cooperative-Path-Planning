@@ -1,5 +1,5 @@
-from components.board import Board
-from components.connector import Connector
+from pcb_twin import Board
+from pcb_twin import Connector
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import matplotlib.patheffects as pe
