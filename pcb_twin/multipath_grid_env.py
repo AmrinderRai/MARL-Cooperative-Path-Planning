@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 from pcb_twin.board import Board
 from pcb_twin.connector import Connector
+=======
+from pcb_twin import Board
+from pcb_twin import Connector
+>>>>>>> 4aa8a02039105e471bced2ed3a8a1d89f4f9319d
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 import matplotlib.patheffects as pe
