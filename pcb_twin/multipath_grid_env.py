@@ -73,7 +73,7 @@ class MultiPathGridEnv():
         for idx in range(self.n_agents):
             connector = self.connectors[idx] 
             head_coord = connector.get_head()
-            dist = self._get_euclid_distance(head_coord, self.goals[idx]) # <-- Note used any longer
+            dist = self._get_euclid_distance(head_coord, self.goals[idx]) 
             obs = (self.return_obs(head_coord), dist)
             all_obs.append(obs)
         return self._return_obs(all_obs)
