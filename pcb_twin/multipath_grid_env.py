@@ -63,25 +63,32 @@ class MultiPathGridEnv():
             rewards.append(reward)
             all_obs.append(obs)
 
-        return all_obs, rewards, self.episode_ended
+        rewards = rewards[0] if self.n_agents==1 else rewards 
 
-    def start_obs(self): 
+        return self._return_obs(all_obs), rewards, self.episode_ended
+
+    def _start_obs(self): 
         # Assert agent == moves 
         all_obs = [] # TO DO
         for idx in range(self.n_agents):
             connector = self.connectors[idx] 
             head_coord = connector.get_head()
-            dist = self._get_euclid_distance(head_coord, self.goals[idx])
+            dist = self._get_euclid_distance(head_coord, self.goals[idx]) # <-- Note used any longer
             obs = (self.return_obs(head_coord), dist)
             all_obs.append(obs)
-
-        return all_obs
+        return self._return_obs(all_obs)
 
     def reset(self):
         self.connectors = []
         self._init_board()
         self.episode_ended = [False]*self.n_agents
-        return self.start_obs()
+        return self._start_obs()
+
+    def _return_obs(self, obs_list):
+        """ Readies observations to return:
+            - Reduces list to just obs when only a single agent simulation 
+        """
+        return obs_list[0] if self.n_agents==1 else obs_list
 
     def render(self):
         plt.ion()
@@ -92,10 +99,9 @@ class MultiPathGridEnv():
 
         env_plot = self.board.grid.copy()
         env_plot = env_plot.astype(int)
-        colors = ['grey', 'white', 'pink', 'red', 'green', 'blue', 'yellow', 'purple', 'purple']
+        colors = ['grey', 'white', 'pink', 'red', 'green', 'blue', 'yellow', 'purple', 'purple'] 
         cmap = ListedColormap(colors[:self.n_agents+2])
         ax.matshow(env_plot, cmap=cmap) 
-
         plt.show()
 
 
